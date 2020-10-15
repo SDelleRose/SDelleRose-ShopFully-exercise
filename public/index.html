@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0' />
+    <title>ShopFully.it</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+
+<body>
+    <header id="header">
+
+        <div class="open_side_menu" id="open_side_menu">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
+
+        <h1>ShopFully</h1>
+
+        <div class="side_menu" id="side_menu">
+            <div class="side_menu_header">
+                <p class="close_side_menu" id="close_side_menu">x</p>
+                <h2>Favourites</h2>
+                <p>The list of your preferred flyers</p>
+                <hr>
+            </div>
+            <div class="preferred_list_conteiner">
+                <ul class="preferred_flyers_list" id="preferred_flyers_list">
+                </ul>
+            </div>
+        </div>
+
+        <div class="shadow_side_menu" id="shadow_side_menu"></div>
+    </header>
+
+
+    <div class="pagination">
+        <button value="1" onclick="request_api(this.value)" id="input_page_left" class="page_input">&laquo;</button>
+        <input type="button" value="1" onclick="request_api(this.value)" id="input_page_first" class="page_input"
+            style="display: none;">
+        <p class="page_input" id="input_page_first_dots" style="display: none;">...</p>
+
+        <input type="button" value="1" onclick="request_api(this.value)" id="input_page_a" class="page_input">
+        <input type="button" value="2" onclick="request_api(this.value)" id="input_page_b" class="page_input">
+        <input type="button" value="3" onclick="request_api(this.value)" id="input_page_c" class="page_input">
+        <input type="button" value="4" onclick="request_api(this.value)" id="input_page_d" class="page_input"
+            style="display: none;">
+
+        <p class="page_input" id="input_page_last_dots" style="display: none;">...</p>
+        <input type="button" value="4" onclick="request_api(this.value)" id="input_page_last" class="page_input"
+            style="display: none;">
+        <button value="1" onclick="request_api(this.value)" id="input_page_right" class="page_input">&raquo;</button>
+    </div>
+
+
+    <div class="flyersGrid" id="flyersGrid">
+    </div>
+
+
+    <script type="text/javascript" src="/static/js/pagination.js"></script>
+    <script type="text/javascript" src="/static/js/request-api.js"></script>
+    <script type="text/javascript" src="/static/js/favorites-management.js"></script>
+</body>
+
+</html>
